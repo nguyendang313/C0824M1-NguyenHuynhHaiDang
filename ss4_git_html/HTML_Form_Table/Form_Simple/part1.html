@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <style>
+        html{
+            display: inline-block;
+            max-width: calc(100% - 1em);
+        }
+        table{
+            border: 10px solid;
+            border-color: aqua;
+            padding: 6px;
+        }
+        th{
+            background-color: #f16c2f;
+            color: #fff;
+        }
+        .inf{
+            color: blue;
+            text-align: right;
+        }
+        .tx{
+            color: #f16c2f;
+        }
+        button{
+            background-color: rgb(192, 202, 202);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th colspan="4">SỞ THÍCH CỦA BẠN</th>
+            </tr>
+            <tr>
+                <td class="inf"><label for="Name">Họ và tên</label></td>
+                <td colspan="2"><input type="text" id="Name"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="inf"><label for="mail">Email</label></td>
+                <td colspan="2"><input type="text" id="mail"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="inf"><label for="">Sở thích</label></td>
+                <td class="tx"><label for="TT"><input type="checkbox" id="TT">Thể thao</label></td>
+                <td class="tx"><label for="AMN"><input type="checkbox" id="AMN">Âm nhạc</label></td>
+                <td class="tx"><label for="DS"><input type="checkbox" id="DS">Đọc sách</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="tx"><label for="LW"><input type="checkbox" id="LW">Lướt web</label></td>
+                <td class="tx"><label for="CG"><input type="checkbox" id="CG">Chơi game</label></td>
+                <td class="tx"><label for="DA"><input type="checkbox" id="DA">Điện ảnh</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="tx"><label for="DL"><input type="checkbox" id="DL">Du lịch</label></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><button type="submit">Gửi thông tin</button> <button type="reset">Nhập lại</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

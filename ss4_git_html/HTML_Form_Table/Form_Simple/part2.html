@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        table{
+            border: 5px solid rgb(241, 237, 172);
+            background-color: rgb(241, 237, 172);
+        }
+        tr{
+            padding: 1px;
+        }
+        th{
+            text-align: left;
+            background-color: rgb(162, 253, 223);
+            color: blue;
+            margin: 15px;
+        }
+        .inf1{
+            color: blue;
+            width: 15%;
+        }
+        .inf2{
+            width: 60%;
+        }
+        #ADR{
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">REGISTER</th>
+        </tr>
+        <tr>
+            <td class="inf1">Name</td>
+            <td class="inf2"><input type="text" size="30"></td>
+        </tr>
+        <tr>
+            <td class="inf1">Birthday</td>
+            <td class="inf2"><input type="text" size="16"></td>
+        </tr>
+        <tr>
+            <td class="inf1">Gender</td>
+            <td class="inf2"><label for="NAM"><input type="radio" name="Gender" id="NAM">Nam</label> 
+                <label for="NU"><input type="radio" name="Gender" id="NU">Nữ</label></td>
+        </tr>
+        <tr>
+            <td class="inf1" id="ADR">Address</td>
+            <td class="inf2"><textarea name="" id="" cols="25" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td class="inf1">Class</td>
+            <td class="inf2">
+                <select name="" id="">
+                    <option value="">-- Chọn lớp --</option>
+                    <option value="">10A</option>
+                    <option value="">10B</option>
+                    <option value="">10C</option>
+                    <option value="">10D</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td class="inf1">Email</td>
+            <td class="inf2"><input type="email"></td>
+        </tr>
+        <tr>
+            <td class="inf1">Phone</td>
+            <td class="inf2"><input type="number"></td>
+        </tr>
+        <tr>
+            <td class="inf1"></td>
+            <td class="inf2"><button type="submit">Register</button> <button type="reset">Re-try</button></td>
+        </tr>
+    </table>
+</body>
+</html>

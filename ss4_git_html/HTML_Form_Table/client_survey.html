@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
     <title>Client Survey</title>
     <style>
-        hr{
-            border: none;
-            border-top: 0.5px dashed #d4d4d4;
-            margin: 20px 0;
-        }
+      hr {
+        border: none;
+        border-top: 0.5px dashed #d4d4d4;
+      }
+      .WH {
+        width: 50%;
+      }
     </style>
-</head>
-<body>
-    <form action="">
-        <ul>
-            <h2>Market Research Survey</h2>
-        <p>please take a few moments to complete this satisfaction survey.</p>
-        <hr>
-        
-            <label for="age"><strong>What is your age range?</strong></label><br>
-            <select name="" id="age">
-                <option value="18-24">18-24</option>
-                <option value="25-34">25-34</option>
-                <option value="35-50">35-50</option>
-                <option value="50+">50+</option>
-            </select>
-        <br>
-       
-            <label for="inc"><strong>What is your yearly income range?</strong></label><br>
-            <select name="" id="inc">
-                <option value="">18-24</option>
-                <option value="">25-34</option>
-                <option value="">35-50</option>
-                <option value="">50+</option>
-            </select>
-        
-        </ul>
-    </form>
-</body>
+  <body>
+    <h2>Market Research Survey</h2>
+    <p>please take a few moments to complete this satisfaction survey.</p>
+    <hr />
+    <div>
+      <label for="age">What is your age range?</label><br />
+      <select name="age" id="age" class="WH">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+      </select>
+    </div>
+    <div>
+      <label for="inc">What is your yearly income range?</label><br />
+      <select name="money" id="inc" class="WH">
+        <option value="$0 - $25,000">$0 - $25,000</option>
+        <option value="$25,001 - $50,000">$25,001 - $50,000</option>
+        <option value="$50,001 - $100,000$">$50,001 - $100,000$</option>
+        <option value="$100,000+">$100,000+</option>
+      </select>
+    </div>
+    <div>
+      <label>Gender Identity</label>
+      <label for=""><input type="radio" />Male</label><br />
+      <label for=""><input type="radio" />Female</label><br />
+      <label for=""><input type="radio" />Nonbinary</label><br />
+      <label for=""><input type="radio" />Other</label><br />
+      <input type="text" /><br />
+      <label for="" style="visibility: hidden"
+        >Maximum of 250 characters. <i>Curently Used:</i> 0
+        <i>characters</i>.</label
+      >
+    </div>
+    <div>
+      <label for=""
+        >Which of the following products have your purchased in the last 2
+        months. Please check all that apply.</label><br />
+      <label for=""><input type="checkbox" /> Product 1</label><br />
+      <label for=""><input type="checkbox" /> Product 2</label><br />
+      <label for=""><input type="checkbox" /> Product 3</label>
+    </div>
+    <div>
+      <label for="">How often would you use our new product?</label><br />
+      <label><input type="radio" name="" /> Daily</label><br />
+      <label><input type="radio" name="" /> Weekly</label><br />
+      <label><input type="radio" name="" /> Monthly</label>
+    </div>
+    <div>
+      <label for="">What would you pay for the new product?</label><br />
+      <label
+        >$<input type="DL" name="" size="20"/> . <input type="Cent" name="" id="Cent" /></label><br />
+      <label for="">Dollars</label> <label for="">Cents</label>
+    </div>
+  </body>
 </html>

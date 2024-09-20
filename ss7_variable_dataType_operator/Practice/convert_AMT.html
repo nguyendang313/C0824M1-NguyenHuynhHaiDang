@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        form{
+            display: inline-flex;
+        }
+        div {
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .a1{
+            margin-right: 20px;
+        }
+        .opt{
+            width: 120px;
+        }
+        .a3{
+            margin-top: 16px;
+        }
+        #AMT{
+            width: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="a1">
+            <label for="AMT">Amount <br>
+                <input type="number" name="Amount" id="AMT">
+            </label>
+        </div>
+        <div class="a2">
+            <label for="fromcv">From Currency</label><br>
+            <select name="" id="fromcv" class="opt">
+                <option value="VN">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+        </div>
+        <div class="a2">
+            <label for="tocv">To Currency</label><br>
+            <select name="" id="tocv" class="opt">
+                <option value="USD">USD</option>
+                <option value="VN">VietNam</option>                
+            </select>
+        </div>
+        <div class="a3">
+            <button onclick="cvt" id="btncv">Convert</button>
+        </div>
+    </form>
+</body>
+<script>
+    let btncv = document.getElementById('btncv')
+    let AMT = document.getElementById('AMT')
+    let fromcv = document.getElementById('fromcv')
+    let tocv = document.getElementById('tocv')
+
+    btncv.addEventListener('click',function (btncv){
+        if (AMT == null) {
+            console.log('Vui lòng nhập số tiền quy đổi')
+            return;
+        }if (AMT <= 0) {
+            console.log('Vui lòng nhập số lớn 0')
+            return;
+        }if () {
+
+        }
+    })
+</script>
+</html>

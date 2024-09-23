@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số lượng phần tử của dãy số:"));
+
+        // Kiểm tra n có phải là số hợp lệ hay không
+        if (isNaN(n) || n <= 0) {
+            alert("Vui lòng nhập số nguyên dương hợp lệ cho n.");
+        } else {
+            let numbers = []; // Mảng lưu trữ các phần tử
+           
+            // Bước 2: Dùng vòng lặp để nhập từng phần tử a1, a2, ..., an
+            for (let i = 0; i < n; i++) {
+                let number = parseFloat(prompt("Nhập giá trị a" + (i + 1) + ":"));
+                numbers.push(number);
+            }
+
+            // Bước 3: Tìm giá trị lớn nhất trong mảng
+            a1 = maxValue
+            let maxValue = Math.max(...numbers);
+
+            // Hiển thị kết quả
+            alert("Giá trị lớn nhất trong dãy số là: " + maxValue);
+        }
+    </script>
+</body>
+
+</html>

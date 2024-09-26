@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
   <script>
-    let a = +prompt('Nhập a: ');
-    let b = +prompt('Nhập b: ');
-    let c = +prompt('Nhập c: ');
-    let delta = parseFloat((b*b)-(4*a*c));
+    let p = +prompt('Nhập công xuất tiêu thụ (kW): ')
+    let t = +prompt('Nhập thời gian sử dụng (h): ')
+    let n = +prompt('Số ngày trong tháng: ');
+    let A = p * t * n;
+    let tongTien = parseFloat(0);
+    let level1 = parseFloat(1.806);
+    let level2 = parseFloat(1.866);
+    let level3 = parseFloat(2.167);
+    let level4 = parseFloat(2.729)
+    let level5 = parseFloat(3.050);
+    let level6 = parseFloat(3.151);
 
-    if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
-      alert('Vui lòng nhập số thích hợp!')
-    } else if (a !== 0) {
-      if (delta > 0) {
-        let x1 = parseFloat((-b + Math.sqrt(delta)) / (2 * a));
-        let x2 = parseFloat((-b - Math.sqrt(delta)) / (2 * a));
-        alert(`Phương trình có 2 nghiệm: x1 = ${x1.toFixed(3)} và x2 = ${x2.toFixed(3)}`);
-      } else if (delta === 0) {
-        let x = parseFloat((-b) / (2 * a));
-        alert(`Phương trình có nghiệm kép: x = ${x.toFixed(3)}`);
-      } else {
-        alert('Phương trình vô nghiệm');
-      }
-    } else if (a === 0) {
-      alert('Đây không phải phương trình bậc 2!')
+    if (p <= 0 || t <= 0 || n <= 0) {
+      alert('Vui lòng nhập thông tin thích hợp')
+    } else if (A >= 401) {
+      alert(`Tiền điện tháng này: ${tongTien = (((level1 + level2) * 50) + ((level3 + level4 + level5) * 100) + ((A - 400) * level6)) * 108 /100} VNĐ`)
+    } else if (A >= 301) {
+      alert(`Tiền điện tháng này: ${tongTien = (((level1 + level2) * 50) + ((level3 + level4) * 100) + ((A - 300) * level5)) * 108 /100} VNĐ`)
+    } else if (A >= 201) {
+      alert(`Tiền điện tháng này: ${tongTien = (((level1 + level2) * 50) + (level3 * 100) + ((A - 200) * level4)) * 108 /100} VNĐ`)
+    } else if (A >= 101) {
+      alert(`Tiền điện tháng này: ${tongTien = (((level1 + level2) * 50) + ((A - 100) * level3)) * 108 /100} VNĐ`)
+    } else if (A >=51) {
+      alert(`Tiền điện tháng này: ${tongTien = ((level1 * 50) + ((A - 50) * level2)) * 108 /100} VNĐ`)
+    } else {
+      alert(`Tiền điện tháng này: ${tongTien = ((50 - A) * level1) * 108 /100} VNĐ`)
     }
   </script>
 </body>

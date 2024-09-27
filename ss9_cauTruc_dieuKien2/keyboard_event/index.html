@@ -8,20 +8,17 @@
     <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position: absolute; left: 0; top: 0;" height="30%" width="30%">
 </body>
 <script>
+    let element = document.getElementById("nobita");
     function upArrowPressed() {
-        let element = document.getElementById("nobita");
         element.style.top = parseInt(element.style.top) - 15 + 'px';
     }
     function downArrowPressed() {
-        let element = document.getElementById("nobita");
         element.style.top = parseInt(element.style.top) + 15 + 'px';
     }
     function leftArrowPressed() {
-        let element = document.getElementById("nobita");
         element.style.left = parseInt(element.style.left) - 15 + 'px';
     }
     function rightArrowPressed() {
-        let element = document.getElementById("nobita");
         element.style.left = parseInt(element.style.left) + 15 + 'px';
     }
 

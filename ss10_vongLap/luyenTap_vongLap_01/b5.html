@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fibonacci;
+    let sum = 0;
+
+    document.write(b + '<br>')
+    for (let i = 2; i <= 20; i++) {
+        fibonacci = a + b;
+        document.write(fibonacci + '<br>');
+        a = b;
+        b = fibonacci;
+    }
+    sum = fibonacci
+    document.write(`Tổng các phần tử của fibonacci: ${sum}`)
+</script>
+</body>
+</html>

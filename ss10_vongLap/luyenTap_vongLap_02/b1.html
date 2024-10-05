@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function printFibonacci(n) {
+            let fib = [0, 1]; // Bắt đầu với 0 và 1
+
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2]; // Mỗi số là tổng của hai số liền trước
+            }
+
+            // console.log(fib); // In ra dãy Fibonacci            
+            document.write(fib);
+        }
+
+        n = +prompt('Nhập số lượng muốn in: ')
+            while (true) {
+                if (isNaN(n) || n <=2 || !(Number.isInteger(n))) {
+                    alert('Vui lòng nhập số nguyên từ 3 trở lên!');
+                    n = +prompt('Nhập số lượng muốn in: ')
+                } else {
+                    // Gọi hàm với số lượng phần tử trong dãy Fibonacci
+                    printFibonacci(n); // In ra 10 số đầu tiên của dãy Fibonacci
+                    break;
+                }
+            }
+    </script>
+</body>
+</html>

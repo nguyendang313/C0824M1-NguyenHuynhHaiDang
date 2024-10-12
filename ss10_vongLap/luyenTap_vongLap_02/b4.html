@@ -6,23 +6,19 @@
 </head>
 <body>
     <script>
-        for (let i = 1; i <= 20; i++) {
-            let star = '*';  
-            document.write(star);
-        }
+        let width = 20;  // Chiều rộng của hình chữ nhật
+        let height = 6;  // Chiều cao của hình chữ nhật
 
-        document.write('<br>')
-        for (let i = 1; i <= 20; i++) {
-            let star = '*'
-            for (k = 1; k <=5; k++){
-                
-                for ( let j = 2; i <= 19; j++) {
-                    let spaces = '&nbsp&nbsp'
-                    document.write(spaces);
-                }
+        for (let i = 0; i <= height; i++) {
+            if (i === 0 || i === height) {
+                // Dòng đầu và dòng cuối in đầy dấu *
+                document.write('*'.repeat(width) + '<br>');
+            } else {
+                // Các dòng giữa in dấu * ở đầu và cuối, còn lại là khoảng trắng
+                document.write('*' + '&nbsp&nbsp'.repeat(width - 2) + '*' + '<br>');
             }
-            document.write(star);
         }
+        
     </script>
 </body>
 </html>

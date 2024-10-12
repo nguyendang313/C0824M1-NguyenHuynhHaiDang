@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateCompoundInterestWithLoop(P, r, n, t) {
+            let amount = P; // Khởi tạo với số tiền gốc ban đầu
+
+            for (let i = 1; i <= n * t; i++) {
+                // Cộng lãi sau mỗi lần nhập lãi vào gốc
+                amount += amount * (r / n);
+                console.log(`Sau kỳ ${i}, số tiền là: ${amount.toFixed(2)} VND`);
+            }
+
+            return amount;
+        }
+
+        // Nhập dữ liệu
+        let p = +prompt('Nhập số tiền: ');
+        let r = +prompt('Nhập tỉ lệ lãi: ');
+        let n = +prompt('Số tháng gộp: ');
+        let t = +prompt('Thời hạn gửi: ');
+
+        // Tính lãi kép
+        let totalAmount = calculateCompoundInterestWithLoop(p, r, n, t);
+        console.log(`Tổng số tiền sau ${t} năm: ${totalAmount.toFixed(2)} VND`);
+    </script>
+</body>
+</html>

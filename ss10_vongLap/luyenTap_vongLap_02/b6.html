@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function drawHeart() {
+            let size = 8; // Kích thước trái tim
+            let output = '';
+
+            // Vẽ phần trên của trái tim (2 vòng cung)
+            for (let i = size / 2; i <= size; i += 2) {
+                for (let j = 1; j < size - i; j += 2) {
+                    output += '&nbsp&nbsp';
+                }
+                for (let j = 1; j <= i; j++) {
+                    output += '*';
+                }
+                for (let j = 1; j <= size - i; j++) {
+                    output += '&nbsp&nbsp';
+                }
+                for (let j = 1; j <= i; j++) {
+                    output += '*';
+                }
+                output += '<br>';
+            }
+
+            // Vẽ phần dưới của trái tim (hình tam giác ngược)
+            for (let i = size; i >= 1; i--) {
+                for (let j = i; j < size; j++) {
+                    output += '&nbsp&nbsp';
+                }
+                for (let j = 1; j <= (i * 2) - 1; j++) {
+                    output += '*';
+                }
+                output += '<br>';
+            }
+
+            document.write(output);
+        }
+
+        drawHeart();
+    </script>
+</body>
+</html>

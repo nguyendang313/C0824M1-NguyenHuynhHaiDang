@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    // Khởi tạo mảng rỗng
+    let arrInt = [];
+
+    // Sử dụng vòng lặp để nhập 10 số từ bàn phím
+    for (let i = 0; i < 10; i++) {
+      let userInput = prompt(`Nhập số nguyên thứ ${i + 1}: `);
+
+      // Kiểm tra xem giá trị nhập vào có phải là số hay không
+      if (isNaN(userInput)) {
+        alert("Giá trị không phải là số. Vui lòng nhập lại!");
+        i--; // Giảm i để nhập lại phần tử hiện tại
+      } else {
+        arrInt.push(parseInt(userInput)); // Chuyển chuỗi nhập vào thành số nguyên và thêm vào mảng
+      }
+    }
+
+    let max = arrInt[0];
+    let maxIndex = 0;
+
+    // Duyệt qua mảng để tìm phần tử lớn nhất và vị trí của phần tử
+    for (let i = 1; i < arrInt.length; i++) {
+      if (arrInt[i] > max) {
+        max = arrInt[i]; // Cập nhật giá trị lớn nhất
+        maxIndex = i + 1; // Cập nhật vị trí của phần tử lớn nhất
+      }
+    }
+
+    document.write(`Mảng số nguyên vừa nhập là: ${arrInt} <br>`);
+    document.write(`Phần tử lớn nhất trong mảng là: ${max} <br>`);
+    document.write(`Vị trí của phần tử lớn nhất trong mảng là: ${maxIndex}`);
+  </script>
+</body>
+</html>

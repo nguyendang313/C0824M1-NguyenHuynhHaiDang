@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arrInt = [];
+        let n = prompt("Nhập vào số lượng phần tử của mảng: ");
+
+        if (isNaN(n) || n <= 0) {
+            alert("Vui lòng nhập số nguyên dương!");
+        } else {
+            for (let i = 0; i < n; i++) {
+                let userInput = prompt(`Nhập số nguyên thứ ${i + 1}: `);
+
+                if (isNaN(userInput)) {
+                    alert("Giá trị không phải là số. Vui lòng nhập lại.");
+                    i--;
+                } else {
+                    arrInt.push(parseInt(userInput));
+                }
+            }
+        }
+
+        let sum = 0;
+
+        // Tính tổng giá trị các phần tử của mảng
+        for (let i = 0; i < arrInt.length; i++) {
+            sum += arrInt[i];
+        }
+
+        // Tính giá trị trung bình của mảng
+        let  average = sum / arrInt.length;
+
+        document.write(`Mảng đã nhập là: ${arrInt} <br>`);
+        document.write(`Giá trị trung bình của mảng là: ${average}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let arrInt = [];
+    let n = prompt("Nhập số vào lượng phần tử của mảng: ");
+
+    if (isNaN(n)) {
+      alert("Vui lòng nhập vào số nguyên");
+    } else {
+      for (let i = 0; i < n; i++) {
+        let userInput = prompt(`Nhập số nguyên thứ ${i + 1}: `);
+
+        if (isNaN(userInput)) {
+          alert("Giá trị không phải là số. Vui lòng nhập lại.");
+          i--;
+        } else {
+          arrInt.push(parseInt(userInput));
+        }
+      }
+    }
+
+    let count = 0;
+
+    for (let i = 0; i < arrInt.length; i++) {
+      if (arrInt[i] < 0) {
+        count++;
+      }
+    }
+
+    document.write(`Mảng vừa nhập là: ${arrInt} <br>`);
+    document.write(`Số phần tử âm trong mảng là: ${count}`);
+
+  </script>
+</body>
+</html>

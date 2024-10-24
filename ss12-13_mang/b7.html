@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
@@ -12,23 +12,23 @@
             let userInput = prompt(`Nhập số nguyên thứ ${i + 1}: `);
 
             if (isNaN(userInput)) {
-                alert("Giá trị không phải là số. Vui lòng nhập lại.");
+                alert("Giá trị không thích hợp. Vui lòng nhập số nguyên khác 0!");
             } else {
                 arrInt.push(parseInt(userInput));
             }
         }
-
-        document.write(`Mảng vừa nhập là: ${arrInt} <br>`);
         
+        document.write(`Mảng vừa nhập là: ${arrInt} <br>`);
+
         let V = prompt(`Nhập giá trị muốn kiểm tra: `);
 
-        while (isNaN(V)) {
-            alert("Giá trị không phải là số. Vui lòng nhập lại.");
+        while (isNaN(V) || V === 0) {
+            alert("Giá trị không thích hợp. Vui lòng nhập số nguyên khác 0!");
             V = prompt(`Nhập giá trị muốn kiểm tra: `);
         }
 
         if (arrInt.includes(V)) {
-            document.write(`${V} is in the array`)
+            
         } else {
             document.write(`${V} is not in the array`)
         }
